@@ -4,3 +4,6 @@ server/node_modules/
 dist/
 build/
 .env
+.gitignore
+package-lock.json   
+package.json
