@@ -72,8 +72,8 @@ Follow these steps to set up the project locally:
     MAIL=<MAILID_FOR_SENDING_MAIL>
     MAILPASSWORD=<APP_PASSWORD>
     ADMIN_SECRET=<Admin_SECRET_FOR_ADMIN_LOGIN>
-**Put this .env file inside the Server folder for correct configuration**
-**Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin"**
+- **Put this .env file inside the Server folder for correct configuration**
+- **Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin"**
 
 5. Install concurrently if it is not installed:
     ```bash
