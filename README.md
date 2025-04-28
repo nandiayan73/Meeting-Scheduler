@@ -57,11 +57,11 @@ Follow these steps to set up the project locally:
 
 2. Navigate to the project directory:
     ```bash
-    cd Meeting_Scheduler
+    cd Meeting-Scheduler
 
-3. Navigate to the project directory:
+3. Install all dependencies for both frontend and backend:
     ```bash
-    Install all dependencies for both frontend and backend:
+    npm run install-all
 
 4. Set up environment variables: Create a .env file in the root directory and configure the following variables:
     ```bash
@@ -72,11 +72,14 @@ Follow these steps to set up the project locally:
     MAIL=<MAILID_FOR_SENDING_MAIL>
     MAILPASSWORD=<APP_PASSWORD>
     ADMIN_SECRET=<Admin_SECRET_FOR_ADMIN_LOGIN>
+**Put this .env file inside the Server folder for correct configuration**
+Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin" 
 
--Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin" 
+5. Install concurrently if it is not installed:
+    ```bash
+    npm install concurrently
 
-
-5. Start both the client (React) and the server (Node.js + Express) together:
+6. Start both the client (React) and the server (Node.js + Express) together:
     ```bash
     npm run dev
 
