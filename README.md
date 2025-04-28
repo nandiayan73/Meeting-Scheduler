@@ -4,14 +4,14 @@
 
 A full-stack meeting scheduler application with conflict detection, real-time updates, and advanced features such as best slot suggestions and user authentication.
 
-## Tech Stack
+# Tech Stack
 
 - **Frontend**: React (with hooks), TailwindCSS for UI styling
 - **Backend**: Node.js with Express
 - **Database**: MongoDB
 
 
-## Key Features
+# Key Features
 
 ### 1. User Authentication
 ![Calendar View](./assets/img7.jpg)
@@ -47,20 +47,41 @@ A full-stack meeting scheduler application with conflict detection, real-time up
 ![Calendar View](./assets/img10.jpg)
 - **ROLE**: Admins can delete user as well as any meeting.
 
-## Installation
+# Installation
 
 Follow these steps to set up the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/nandiayan73/Meeting_Scheduler.git
+   git clone https://github.com/nandiayan73/Meeting-Scheduler
 
 2. Navigate to the project directory:
+    ```bash
     cd Meeting_Scheduler
 
 3. Navigate to the project directory:
+    ```bash
     Install all dependencies for both frontend and backend:
 
-4. Start both the client (React) and the server (Node.js + Express) together:
+4. Set up environment variables: Create a .env file in the root directory and configure the following variables:
+    ```bash
+    JWT_SECRET=<Your_JWT_SECRET>
+    DB_NAME=<MongoDB_DATABASE_NAME>
+    DB_PASS=<MONGODB_PASSWORD>
+    COOKIE_SECRET=<COOKIE_SECRET>
+    MAIL=<MAILID_FOR_SENDING_MAIL>
+    MAILPASSWORD=<APP_PASSWORD>
+    ADMIN_SECRET=<Admin_SECRET_FOR_ADMIN_LOGIN>
 
+-Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin" 
+
+
+5. Start both the client (React) and the server (Node.js + Express) together:
+    ```bash
     npm run dev
+
+# Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+#License
+This project is licensed under the MIT License. See the LICENSE file for details.
