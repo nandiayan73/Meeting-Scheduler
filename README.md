@@ -18,6 +18,8 @@ A full-stack meeting scheduler application with conflict detection, real-time up
 - **Register/Login**: Allows users to sign up and log in to the app.
 - **JWT-based Authentication**: Ensures secure login sessions using JWT tokens.
 - **Role-based Access**: Supports different roles (User vs Admin).
+- **Admin Authentication** 
+![Calendar View](./assets/img6.jpg)
 
 
 ### 2. Meeting Creation
