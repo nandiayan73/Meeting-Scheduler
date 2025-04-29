@@ -17,6 +17,7 @@ A full-stack meeting scheduler application with conflict detection, real-time up
 ![Calendar View](./assets/img7.jpg)
 - **Register/Login**: Allows users to sign up and log in to the app.
 - **JWT-based Authentication**: Ensures secure login sessions using JWT tokens.
+- **🍪 Cookie-Based Authentication**: Uses HTTP-only cookies to store JWT tokens, enabling session-like authentication in a stateless way.
 
 ### Admin Authentication
 - **Role-based Access Supports different roles (User vs Admin).**
@@ -112,7 +113,7 @@ This repository contains the Mongoose models for a Meeting Scheduler application
     adminSchema.pre('save', async function (next) { /* Password hashing logic */ });
     adminSchema.methods.matchPassword = async function (enteredPassword) { /* Password comparison */ };
 
-**2.User Model**
+**2. User Model**
 - File: models/User.js
 
 - This model defines the schema for Users who will schedule or participate in meetings.
