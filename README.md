@@ -75,6 +75,7 @@ Follow these steps to set up the project locally:
     MAIL=<MAILID_FOR_SENDING_MAIL>
     MAILPASSWORD=<APP_PASSWORD>
     ADMIN_SECRET=<Admin_SECRET_FOR_ADMIN_LOGIN>
+# IMPORTANT NOTE
 - **Put this .env file inside the Server folder for correct configuration**
 - **Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin"**
 
@@ -86,8 +87,93 @@ Follow these steps to set up the project locally:
     ```bash
     npm run dev
 
+
+# Meeting Scheduler Backend Models
+This repository contains the Mongoose models for a Meeting Scheduler application, including Admin, User, and Meeting models. Each model is designed with best practices for data validation, password security, and relationships between collections.
+
+### Models
+**1. Admin Model**
+- File: models/Admin.js
+
+- This model defines the schema for Admin users who can manage the platform.
+
+**Schema Fields:**
+
+- email (String, Required, Unique): Admin's email.
+
+- password (String, Required): Hashed password.
+
+**Features:**
+
+- Password is automatically hashed before saving.
+
+- matchPassword method available to compare entered password with the hashed one.
+    ```bash
+    adminSchema.pre('save', async function (next) { /* Password hashing logic */ });
+    adminSchema.methods.matchPassword = async function (enteredPassword) { /* Password comparison */ };
+
+**2.User Model**
+- File: models/User.js
+
+- This model defines the schema for Users who will schedule or participate in meetings.
+
+**Schema Fields:**
+
+- name (String, Required): User's full name.
+
+- email (String, Required, Unique): User's email.
+
+- password (String, Required): Hashed password.
+
+- image (String, Default): URL for profile image.
+
+- isAdmin (Boolean, Default: false): Role flag to identify admins.
+
+**Features:**
+
+- Password is automatically hashed before saving.
+- matchPassword method available for password comparison.
+
+    ```bash
+    userSchema.pre('save', async function (next) { /* Password hashing logic */ });
+    userSchema.methods.matchPassword = async function (enteredPassword) { /* Password comparison */ };
+
+**3. Meeting Model**
+- File: models/Meeting.js
+
+- This model defines the schema for Meetings created by users.
+
+**Schema Fields:**
+
+- title (String, Required): Meeting title.
+
+- description (String, Optional): Details about the meeting.
+
+- date (Date, Required): Date of the meeting.
+
+- startTime (Date, Required): Start time.
+
+- endTime (Date, Required): End time.
+
+- createdBy (ObjectId, Required): Refers to the User who created the meeting.
+
+- participants (Array of Objects):
+
+- user (ObjectId, Required): Refers to a User participant.
+
+- createdAt (Date, Default: now): Timestamp for when the meeting was created.
+
+- updatedAt (Date, Default: now): Timestamp for when the meeting was last updated.
+
+**Features:**
+
+- Includes references to User for creator and participants.
+
+- Auto-handles timestamps with timestamps: true.
+
 # Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
 # License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
