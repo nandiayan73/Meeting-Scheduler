@@ -51,8 +51,18 @@ const AdminAuthPage = () => {
             <Navbar></Navbar>
         <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
             <Toaster position="top-center" reverseOrder={false} />
+            
             <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-                
+            <center>
+              <img 
+                      src="https://thumbs.dreamstime.com/b/ms-logo-vector-modern-initial-circle-red-ash-color-arches-363653058.jpg" 
+                      alt="Profile" 
+                      className="w-20 h-20 rounded-full object-cover object-top 
+                                hover:shadow-lg hover:brightness-110 hover:scale-110 
+                                transition-all duration-300 ease-in-out cursor-pointer"
+              />
+            </center> 
+            <br></br>
                 <div className="flex justify-center mb-6 gap-4">
                     <button
                         onClick={() => setActiveForm('register')}
