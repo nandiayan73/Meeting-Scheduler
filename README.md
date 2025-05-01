@@ -31,6 +31,8 @@ A full-stack meeting scheduler application with conflict detection, real-time up
   - Description
   - Start and End Time
   - Participants (via email)
+![Calendar View](./assets/img11.jpg)
+  - A mail will be sent to the participants upon creation of the meeting.
 - **Conflict Detection**: The backend checks for scheduling conflicts before saving a new meeting.
 
 
@@ -79,6 +81,7 @@ Follow these steps to set up the project locally:
 ***IMPORTANT NOTE***
 - **Put this .env file inside the Server folder for correct configuration**
 - **Enter this admin secret while registering the admin, if not entered in default it will take it as "Admin"**
+- **Please enter all the enviroment variables for accurate functioning of the website**
 
 5. Install concurrently if it is not installed:
     ```bash
