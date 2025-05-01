@@ -32,7 +32,7 @@ A full-stack meeting scheduler application with conflict detection, real-time up
   - Start and End Time
   - Participants (via email)
 ![Calendar View](./assets/img11.jpg)
-  - A mail will be sent to the participants upon creation of the meeting.
+  - A mail will be sent to the participants upon successful creation of the meeting.
 - **Conflict Detection**: The backend checks for scheduling conflicts before saving a new meeting.
 
 
