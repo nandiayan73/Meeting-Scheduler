@@ -115,8 +115,8 @@ export default function CalendarView() {
   return (
     <div>
       <Navbar></Navbar>
-    <div className="p-8 bg-gray-50 min-h-screen">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-700" style={{color:"#1C2636"}}>
+    <div className="p-8 bg-gray-900 min-h-screen">
+      <h2 className="text-3xl font-bold mb-6 text-center text-white" >
         Your Meetings
       </h2>
 
@@ -129,7 +129,7 @@ export default function CalendarView() {
           >
             Previous
           </button>
-          <h3 className="text-xl font-semibold">
+          <h3 className="text-xl font-semibold" style={{color: 'white'}}>
             {format(selectedDate, 'EEEE, MMMM dd, yyyy')}
           </h3>
           <button

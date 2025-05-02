@@ -8,6 +8,7 @@ import CreateMeeting from "./Components/Meetings/Createmeeting";
 import Profile from "./Pages/profile";
 import AdminAuthPage from "./Components/Admin/auth";
 import AdminProfile from "./Components/Admin/AdminProfile";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/admin/auth" element={<AdminAuthPage></AdminAuthPage>}/>
         <Route path="/admin/profile" element={<AdminProfile></AdminProfile>}/>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
